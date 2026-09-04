@@ -4,9 +4,17 @@ This directory contains documentation and diagrams describing the physical and l
 
 ## Current Environment
 
-The lab currently consists of a Proxmox virtualization host running virtual machines and services.
+# Lab Architecture
 
-Remote access to the lab is provided through Tailscale.
+## Current Network Diagram
+
+![Current Homelab Network Architecture](./network-diagram.png)
+
+The diagram above represents the current architecture of my homelab.
+
+The environment currently consists of a Lenovo ThinkCentre M720q running Proxmox VE with 24 GB of RAM. Proxmox hosts a headless Debian Server VM dedicated to Tailscale and an Ubuntu Desktop VM used as a sandbox and testing environment.
+
+Remote access is currently provided through Tailscale.
 
 ## Components
 
