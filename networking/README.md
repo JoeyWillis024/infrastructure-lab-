@@ -22,7 +22,7 @@ The current network consists of:
 
 ## Current Topology
 
-See [`../architecture/network-diagram.drawio`](../architecture/network-diagram.drawio) for the current network architecture.
+See [`../architecture/network-diagram.drawio`](../architecture/network-diagram.png) for the current network architecture.
 
 ## Current Networking Technologies
 
