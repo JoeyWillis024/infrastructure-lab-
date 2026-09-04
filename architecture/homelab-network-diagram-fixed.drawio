@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" type="device" version="28.0.0">
+  <diagram name="Homelab Architecture" id="homelab-architecture">
+    <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0" background="#0b0b0b">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="internet" value="INTERNET&lt;br&gt;&lt;font style=&quot;font-size:18px;&quot;&gt;1 Gbps Xfinity&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#111111;strokeColor=#4FC3F7;fontColor=#FFFFFF;fontSize=24;fontStyle=1;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="40" width="300" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="gateway" value="Xfinity Gateway&lt;br&gt;&lt;font style=&quot;font-size:18px;&quot;&gt;Modem / Router&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#111111;strokeColor=#4FC3F7;fontColor=#FFFFFF;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="190" width="400" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="host" value="Lenovo ThinkCentre M720q&lt;br&gt;&lt;font style=&quot;font-size:20px;&quot;&gt;Proxmox VE&lt;br&gt;24 GB RAM&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#111111;strokeColor=#81C784;fontColor=#FFFFFF;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="520" y="350" width="560" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="bridge" value="Proxmox Virtual Network&lt;br&gt;&lt;font style=&quot;font-size:18px;&quot;&gt;vmbr0&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#111111;strokeColor=#FFD54F;fontColor=#FFFFFF;fontSize=20;fontStyle=1;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="625" y="540" width="350" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="debian" value="Debian Server VM&lt;br&gt;&lt;font style=&quot;font-size:17px;&quot;&gt;Headless&lt;br&gt;Dedicated to Tailscale&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#111111;strokeColor=#CE93D8;fontColor=#FFFFFF;fontSize=20;fontStyle=1;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="350" y="700" width="330" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="ubuntu" value="Ubuntu Desktop VM&lt;br&gt;&lt;font style=&quot;font-size:17px;&quot;&gt;Sandbox / Testing&lt;br&gt;General Purpose&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#111111;strokeColor=#64B5F6;fontColor=#FFFFFF;fontSize=20;fontStyle=1;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="920" y="700" width="330" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="tailscale" value="TAILSCALE&lt;br&gt;&lt;font style=&quot;font-size:17px;&quot;&gt;Remote Access&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#111111;strokeColor=#29B6F6;fontColor=#FFFFFF;fontSize=20;fontStyle=1;spacing=10;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="700" width="220" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="internet" target="gateway"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" value="Ethernet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;strokeWidth=2;endArrow=block;endFill=1;fontColor=#FFFFFF;" edge="1" parent="1" source="gateway" target="host"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="host" target="bridge"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="bridge" target="debian"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FFFFFF;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="bridge" target="ubuntu"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" value="Tailscale VPN" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#29B6F6;strokeWidth=2;dashed=1;endArrow=block;endFill=1;fontColor=#FFFFFF;" edge="1" parent="1" source="tailscale" target="debian"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
