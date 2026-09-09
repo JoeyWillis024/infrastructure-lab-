@@ -53,6 +53,13 @@ Wireless network interface.
 - Status: Inactive
 - Currently unused
 
+- ## Virtual Machines
+
+| Host | IP Address | Subnet | Subnet Mask | Default Gateway |
+|---|---|---|---|---|
+| Ubuntu VM | `10.0.0.8` | `10.0.0.0/24` | `255.255.255.0` | `10.0.0.1` |
+| Debian VM | `10.0.0.13` | `10.0.0.0/24` | `255.255.255.0` | `10.0.0.1` |
+
 ## Network Addressing
 
 The current network uses the private IPv4 address space:
@@ -63,11 +70,4 @@ Subnet Mask:   255.255.255.0
 Gateway:       10.0.0.1
 Proxmox Host:  10.0.0.232
 # IP Addressing
-
-## Virtual Machines
-
-| Host | IP Address | Subnet | Subnet Mask | Default Gateway |
-|---|---|---|---|---|
-| Ubuntu VM | `10.0.0.8` | `10.0.0.0/24` | `255.255.255.0` | `10.0.0.1` |
-| Debian VM | `10.0.0.13` | `10.0.0.0/24` | `255.255.255.0` | `10.0.0.1` |
 
