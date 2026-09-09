@@ -37,9 +37,10 @@ This repository documents the design, configuration, troubleshooting, and ongoin
 
 ### Automation
 
-* Bash
-* Python
-* Git
+
+* Bash Scripting
+
+
 
 ## Lab Goals
 
@@ -145,7 +146,7 @@ TCP/IP • DNS • DHCP • VLANs • Routing • VPN • Firewalls
 Linux • Windows • Proxmox • Virtualization • Docker
 
 **Programming & Automation:**
-Python • Bash • Git • Ansible
+Python • Bash • Git 
 
 **Infrastructure:**
 Virtualization • Networking • Server Administration • Containerization
