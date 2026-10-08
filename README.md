@@ -35,6 +35,8 @@ This repository documents the design, configuration, troubleshooting, and ongoin
 * Self-hosted services
 * Remote administration
 
+See [`services/`](./services/) for deployed-service notes, including [Uptime Kuma](./services/uptime-kuma.md).
+
 ### Automation
 
 
@@ -157,4 +159,3 @@ Network Segmentation • Access Control • System Hardening • Secure Remote A
 ## Disclaimer
 
 This is a personal learning environment and is continuously evolving as I develop additional technical skills and experiment with new technologies.
-
