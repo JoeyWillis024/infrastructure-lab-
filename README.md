@@ -1,6 +1,3 @@
-# infrastructure-lab-
-Personal homelab for learning networking, virtualization, Linux, security, and infrastructure.
-
 # Infrastructure Lab
 
 Personal homelab focused on developing practical skills in **networking, virtualization, Linux administration, security, automation, and infrastructure engineering**.
