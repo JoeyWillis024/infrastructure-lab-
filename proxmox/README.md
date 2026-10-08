@@ -22,23 +22,7 @@ Additional hardware specifications will be documented as the lab develops.
 
 ## Virtual Machines
 
-The current environment contains:
-
-### Debian Server
-
-* **Operating System:** Debian
-* **Type:** Headless server
-* **Primary Purpose:** Tailscale / remote access
-* **Status:** Active
-
-### Ubuntu Desktop
-
-* **Operating System:** Ubuntu Desktop
-* **Type:** Desktop VM
-* **Primary Purpose:** Sandbox and testing
-* **Status:** Active
-
-See [`vm-inventory.md`](./vm-inventory.md) for the current VM inventory.
+The current environment contains an Ubuntu Desktop VM, a dedicated Debian VM for Tailscale, and a separate Debian Docker VM (`debdock`) that hosts the three homelab services. See [`vm-inventory.md`](./vm-inventory.md) for the inventory and details that still need to be recorded.
 
 ## Virtual Networking
 

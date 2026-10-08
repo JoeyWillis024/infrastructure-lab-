@@ -8,6 +8,9 @@ This document tracks the virtual machines currently deployed within the Proxmox 
 |---|---|---|---:|---:|---:|---|---|---|
 | 100 | `willy` | Ubuntu Desktop | 4 cores | 7.47 GiB | 32 GB | VirtIO / vmbr0 | Sandbox / Testing | Active |
 | 101 | `tailscale` | Debian | 1 core | 2 GiB | 8 GB | VirtIO / vmbr0 | Tailscale / Remote Access | Active |
+| Not recorded | `debdock` | Debian | Not recorded | Not recorded | Not recorded | Not recorded | Docker host for Uptime Kuma, Pi-hole, and Navidrome | Active |
+
+Uptime Kuma, Pi-hole, and Navidrome run on the Debian Docker VM `debdock`, separate from the dedicated Tailscale VM. The Docker VM's ID, resource allocations, and network details have not yet been recorded.
 
 ## VM 100 — willy
 
@@ -64,7 +67,4 @@ The VM is dedicated to Tailscale and provides remote access capabilities for adm
 
 ## Network Configuration
 
-Both virtual machines currently connect to the Proxmox Linux bridge:
-
-```text
-vmbr0
+The inventory records VMs 100 and 101 on the Proxmox Linux bridge `vmbr0`. The network assignment for `debdock` has not yet been recorded.
