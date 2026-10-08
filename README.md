@@ -1,8 +1,6 @@
 # Infrastructure Lab
 
-Personal homelab focused on developing practical skills in **networking, virtualization, Linux administration, security, automation, and infrastructure engineering**.
-
-This repository documents the design, configuration, troubleshooting, and ongoing development of my home infrastructure.
+This repository documents my personal homelab and its ongoing development while I build practical skills in **networking, virtualization, Linux administration, security, automation, and infrastructure engineering**.
 
 ## Current Infrastructure
 
