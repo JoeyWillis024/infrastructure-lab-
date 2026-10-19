@@ -53,12 +53,13 @@ Wireless network interface.
 - Status: Inactive
 - Currently unused
 
-- ## Virtual Machines
+## Virtual Machines
 
 | Host | IP Address | Subnet | Subnet Mask | Default Gateway |
 |---|---|---|---|---|
 | Ubuntu VM | `10.0.0.8` | `10.0.0.0/24` | `255.255.255.0` | `10.0.0.1` |
-| Debian VM | `10.0.0.13` | `10.0.0.0/24` | `255.255.255.0` | `10.0.0.1` |
+| `tailscale` Debian VM | `10.0.0.13` | `10.0.0.0/24` | `255.255.255.0` | `10.0.0.1` |
+| `debdock` Debian Docker VM | `10.0.0.12` | `10.0.0.0/24` | `255.255.255.0` | `10.0.0.1` |
 
 ## Network Addressing
 
@@ -69,5 +70,8 @@ Network:       10.0.0.0/24
 Subnet Mask:   255.255.255.0
 Gateway:       10.0.0.1
 Proxmox Host:  10.0.0.232
+tailscale VM:  10.0.0.13
+debdock VM:    10.0.0.12
+Ubuntu VM:     10.0.0.8
 # IP Addressing
 

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Homelab network architecture</title>
+  <desc id="desc">Xfinity Internet and gateway connect to a Proxmox host and three virtual machines on the 10.0.0.0/24 LAN. A Tailscale subnet route provides remote access to the LAN. The debdock virtual machine runs Uptime Kuma, Pi-hole, and Navidrome in Docker.</desc>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#080d18"/></linearGradient>
+    <linearGradient id="host" x2="0" y2="1"><stop stop-color="#193b35"/><stop offset="1" stop-color="#122a29"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#aab8cc"/></marker>
+    <marker id="blueArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#38bdf8"/></marker>
+    <style>
+      text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#f1f5f9}.title{font-size:32px;font-weight:750;letter-spacing:.4px}.subtitle{font-size:15px;fill:#a5b4c8}.label{font-size:20px;font-weight:700}.detail{font-size:16px;fill:#cbd5e1}.small{font-size:13px;fill:#a9b7cb}.tag{font-size:14px;font-weight:650}.card{fill:#111b2a;stroke:#687a93;stroke-width:2}.connector{fill:none;stroke:#aab8cc;stroke-width:3;marker-end:url(#arrow)}.route{fill:none;stroke:#38bdf8;stroke-width:3;stroke-dasharray:10 8;marker-end:url(#blueArrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="1040" fill="url(#bg)"/>
+  <text x="800" y="52" text-anchor="middle" class="title">HOMELAB NETWORK ARCHITECTURE</text>
+  <text x="800" y="80" text-anchor="middle" class="subtitle">Current topology · Home LAN 10.0.0.0/24 · Updated October 2026</text>
+
+  <!-- Internet and gateway -->
+  <rect x="645" y="110" width="310" height="82" rx="18" class="card" stroke="#38bdf8"/>
+  <text x="800" y="145" text-anchor="middle" class="label">INTERNET</text>
+  <text x="800" y="171" text-anchor="middle" class="detail">Xfinity · 1 Gbps</text>
+  <path d="M800 192V225" class="connector"/>
+  <rect x="600" y="230" width="400" height="104" rx="16" class="card" stroke="#60a5fa"/>
+  <text x="800" y="269" text-anchor="middle" class="label">Xfinity Gateway</text>
+  <text x="800" y="296" text-anchor="middle" class="detail">Modem / router · 10.0.0.1</text>
+  <text x="800" y="319" text-anchor="middle" class="small">Home LAN: 10.0.0.0/24</text>
+
+  <!-- Physical host -->
+  <path d="M800 334V370" class="connector"/>
+  <text x="818" y="357" class="small">Ethernet</text>
+  <rect x="470" y="376" width="660" height="128" rx="18" fill="url(#host)" stroke="#4ade80" stroke-width="2.5"/>
+  <text x="800" y="414" text-anchor="middle" class="label">Lenovo ThinkCentre M720q</text>
+  <text x="800" y="444" text-anchor="middle" class="detail">Proxmox VE · 24 GB RAM · 10.0.0.232</text>
+  <text x="800" y="477" text-anchor="middle" class="small">Physical virtualization host</text>
+  <path d="M800 504V540" class="connector"/>
+  <rect x="645" y="545" width="310" height="66" rx="14" fill="#382e13" stroke="#facc15" stroke-width="2"/>
+  <text x="800" y="574" text-anchor="middle" class="label" style="font-size:18px">Proxmox bridge · vmbr0</text>
+  <text x="800" y="598" text-anchor="middle" class="small">LAN-connected virtual network</text>
+
+  <!-- Remote tailnet client -->
+  <rect x="52" y="355" width="292" height="130" rx="18" fill="#102b3a" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="198" y="393" text-anchor="middle" class="label">Remote Tailscale Client</text>
+  <text x="198" y="423" text-anchor="middle" class="detail">Tailnet / VPN</text>
+  <text x="198" y="453" text-anchor="middle" class="small">Remote access to home LAN</text>
+  <path d="M198 485H35V839H58" class="route"/>
+  <rect x="55" y="595" width="295" height="54" rx="12" fill="#0b1925" stroke="#256c8a"/>
+  <text x="202" y="619" text-anchor="middle" class="tag" fill="#7dd3fc">Subnet route · 10.0.0.0/24</text>
+  <text x="202" y="638" text-anchor="middle" class="small">via tailscale VM</text>
+
+  <!-- Branches to VMs -->
+  <path d="M800 611V659H285V716" class="connector"/>
+  <path d="M800 659V716" class="connector"/>
+  <path d="M800 659H1315V716" class="connector"/>
+  <rect x="62" y="704" width="446" height="270" rx="18" fill="#17172b" stroke="#c084fc" stroke-width="2.5"/>
+  <text x="285" y="744" text-anchor="middle" class="label">VM 101 · tailscale</text>
+  <text x="285" y="774" text-anchor="middle" class="detail">Debian · 10.0.0.13</text>
+  <text x="285" y="805" text-anchor="middle" class="small">Dedicated remote-access VM</text>
+  <line x1="95" y1="828" x2="475" y2="828" stroke="#45415e"/>
+  <text x="285" y="860" text-anchor="middle" class="tag" fill="#7dd3fc">Tailscale subnet router</text>
+  <text x="285" y="888" text-anchor="middle" class="detail">Remote clients can reach</text>
+  <text x="285" y="913" text-anchor="middle" class="detail">the home LAN (10.0.0.0/24)</text>
+  <text x="285" y="948" text-anchor="middle" class="small">VirtIO · vmbr0 · Proxmox firewall enabled</text>
+
+  <rect x="577" y="704" width="446" height="270" rx="18" fill="#102a2b" stroke="#2dd4bf" stroke-width="2.5"/>
+  <text x="800" y="744" text-anchor="middle" class="label">debdock · Debian Docker VM</text>
+  <text x="800" y="774" text-anchor="middle" class="detail">10.0.0.12 · vmbr0</text>
+  <text x="800" y="805" text-anchor="middle" class="small">Docker host · VM ID / resources not recorded</text>
+  <line x1="610" y1="828" x2="990" y2="828" stroke="#285451"/>
+  <rect x="628" y="844" width="344" height="34" rx="9" fill="#143b3a" stroke="#367c76"/>
+  <text x="800" y="867" text-anchor="middle" class="tag">Uptime Kuma</text>
+  <rect x="628" y="887" width="344" height="34" rx="9" fill="#143b3a" stroke="#367c76"/>
+  <text x="800" y="910" text-anchor="middle" class="tag">Pi-hole</text>
+  <rect x="628" y="930" width="344" height="30" rx="9" fill="#143b3a" stroke="#367c76"/>
+  <text x="800" y="951" text-anchor="middle" class="tag">Navidrome</text>
+
+  <rect x="1092" y="704" width="446" height="270" rx="18" fill="#14243b" stroke="#60a5fa" stroke-width="2.5"/>
+  <text x="1315" y="744" text-anchor="middle" class="label">VM 100 · willy</text>
+  <text x="1315" y="774" text-anchor="middle" class="detail">Ubuntu Desktop · 10.0.0.8</text>
+  <text x="1315" y="805" text-anchor="middle" class="small">Sandbox / testing · general purpose</text>
+  <line x1="1125" y1="828" x2="1505" y2="828" stroke="#334866"/>
+  <text x="1315" y="868" text-anchor="middle" class="detail">4 CPU · 7.47 GiB RAM</text>
+  <text x="1315" y="897" text-anchor="middle" class="detail">32 GB disk · VirtIO / vmbr0</text>
+  <text x="1315" y="928" text-anchor="middle" class="small">Proxmox firewall enabled</text>
+
+  <text x="800" y="1012" text-anchor="middle" class="small">Solid arrows: LAN and VM connectivity · Dashed blue path: remote Tailscale access · VLAN segmentation not currently documented</text>
+</svg>

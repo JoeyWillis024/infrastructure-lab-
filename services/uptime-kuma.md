@@ -8,7 +8,7 @@ Uptime Kuma monitors whether homelab hosts and web services respond. It runs in 
 
 - **Compose directory:** `/srv/stacks/uptime-kuma`
 - **Compose file:** `compose.yml`
-- **Web interface:** `http://<debdock-IP>:3001`
+- **Web interface:** `http://10.0.0.12:3001`
 - **Image:** `louislam/uptime-kuma:2`
 - **Database:** SQLite, stored in the local Docker volume `uptime-kuma-data` mounted at `/app/data`
 

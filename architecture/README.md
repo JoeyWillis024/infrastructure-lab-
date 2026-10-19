@@ -1,45 +1,29 @@
 # Lab Architecture
 
-This directory contains documentation and diagrams describing the physical and logical architecture of my homelab.
+This directory contains the current physical and logical architecture of the homelab.
 
-## Current Environment
+## Current network diagram
 
-# Lab Architecture
+![Current homelab network architecture](./network-diagram.png)
 
-## Current Network Diagram
+The Xfinity gateway provides the `10.0.0.0/24` home LAN. The Lenovo ThinkCentre M720q runs Proxmox VE and connects its virtual machines to that LAN through `vmbr0`. Three active VMs are documented: `tailscale` (`10.0.0.13`), `debdock` (`10.0.0.12`), and `willy` (`10.0.0.8`). The Docker VM `debdock` hosts Uptime Kuma, Pi-hole, and Navidrome. Tailscale provides remote access to the home LAN.
 
-![Current Homelab Network Architecture](./network-diagram.png)
+The diagram is also available as an editable [draw.io file](./homelab-network-diagram-fixed.drawio) and as an [SVG source](./network-diagram.svg).
 
-The diagram above represents the current architecture of my homelab.
+## Current components
 
-The environment currently consists of a Lenovo ThinkCentre M720q running Proxmox VE with 24 GB of RAM. Proxmox hosts a headless Debian Server VM dedicated to Tailscale and an Ubuntu Desktop VM used as a sandbox and testing environment.
+- Xfinity 1 Gbps Internet and modem/router (`10.0.0.1`)
+- Lenovo ThinkCentre M720q running Proxmox VE with 24 GB RAM (`10.0.0.232`)
+- Proxmox Linux bridge `vmbr0` on `10.0.0.0/24`
+- Debian VM `tailscale` for remote access
+- Debian Docker VM `debdock` for Uptime Kuma, Pi-hole, and Navidrome
+- Ubuntu Desktop VM `willy` for sandboxing and testing
 
-Remote access is currently provided through Tailscale.
+See [`../networking/ip-addressing.md`](../networking/ip-addressing.md) for the recorded addresses and [`../proxmox/vm-inventory.md`](../proxmox/vm-inventory.md) for VM details.
 
-## Components
+## Planned improvements
 
-- Proxmox virtualization host
-- Virtual machines
-- Local network
-- Tailscale VPN
-- Linux servers
-- Self-hosted services
-
-## Network Architecture
-
-The network architecture will evolve as additional networking, security, and infrastructure components are added.
-
-See `network-diagram.png` for the current network topology.
-
-## Future Plans
-
-Planned improvements include:
-
-- VLAN segmentation
-- Dedicated management network
-- Server network
-- Firewall implementation
-- Network monitoring
-- Additional virtualization hosts
-- Centralized logging
-- Automated infrastructure deployment
+- VLAN segmentation and dedicated management, server, guest, and IoT networks
+- Firewall implementation and rules
+- Network monitoring, centralized logging, and DNS documentation
+- Additional virtualization hosts and automated infrastructure deployment
