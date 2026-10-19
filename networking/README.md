@@ -14,12 +14,15 @@ The current network consists of:
 
 * Xfinity 1 Gbps Internet connection
 * Xfinity modem/router
+* TP-Link TL-SG108E 8-port Gigabit Easy Smart Switch between the router and Proxmox host
 * Lenovo ThinkCentre M720q Proxmox host
 * Proxmox virtual networking
 * Debian `tailscale` VM (`10.0.0.13`)
 * Debian Docker VM `debdock` (`10.0.0.12`)
 * Ubuntu Desktop VM `willy` (`10.0.0.8`)
 * Tailscale for remote access
+
+The switch's management address and VLAN configuration have not yet been recorded.
 
 ## Current Topology
 

@@ -18,23 +18,27 @@
   <rect x="645" y="110" width="310" height="82" rx="18" class="card" stroke="#38bdf8"/>
   <text x="800" y="145" text-anchor="middle" class="label">INTERNET</text>
   <text x="800" y="171" text-anchor="middle" class="detail">Xfinity · 1 Gbps</text>
-  <path d="M800 192V225" class="connector"/>
-  <rect x="600" y="230" width="400" height="104" rx="16" class="card" stroke="#60a5fa"/>
-  <text x="800" y="269" text-anchor="middle" class="label">Xfinity Gateway</text>
-  <text x="800" y="296" text-anchor="middle" class="detail">Modem / router · 10.0.0.1</text>
-  <text x="800" y="319" text-anchor="middle" class="small">Home LAN: 10.0.0.0/24</text>
+  <path d="M800 192V215" class="connector"/>
+  <rect x="600" y="220" width="400" height="92" rx="16" class="card" stroke="#60a5fa"/>
+  <text x="800" y="254" text-anchor="middle" class="label">Xfinity Gateway</text>
+  <text x="800" y="280" text-anchor="middle" class="detail">Modem / router · 10.0.0.1</text>
+  <text x="800" y="300" text-anchor="middle" class="small">Home LAN: 10.0.0.0/24</text>
+  <path d="M800 312V330" class="connector"/>
+  <rect x="600" y="335" width="400" height="76" rx="14" fill="#33251a" stroke="#fb923c" stroke-width="2"/>
+  <text x="800" y="366" text-anchor="middle" class="label" style="font-size:18px">TP-Link TL-SG108E</text>
+  <text x="800" y="392" text-anchor="middle" class="small">8-port Gigabit Easy Smart Switch</text>
 
   <!-- Physical host -->
-  <path d="M800 334V370" class="connector"/>
-  <text x="818" y="357" class="small">Ethernet</text>
-  <rect x="470" y="376" width="660" height="128" rx="18" fill="url(#host)" stroke="#4ade80" stroke-width="2.5"/>
-  <text x="800" y="414" text-anchor="middle" class="label">Lenovo ThinkCentre M720q</text>
-  <text x="800" y="444" text-anchor="middle" class="detail">Proxmox VE · 24 GB RAM · 10.0.0.232</text>
-  <text x="800" y="477" text-anchor="middle" class="small">Physical virtualization host</text>
-  <path d="M800 504V540" class="connector"/>
-  <rect x="645" y="545" width="310" height="66" rx="14" fill="#382e13" stroke="#facc15" stroke-width="2"/>
-  <text x="800" y="574" text-anchor="middle" class="label" style="font-size:18px">Proxmox bridge · vmbr0</text>
-  <text x="800" y="598" text-anchor="middle" class="small">LAN-connected virtual network</text>
+  <path d="M800 411V429" class="connector"/>
+  <text x="818" y="425" class="small">Ethernet</text>
+  <rect x="470" y="434" width="660" height="108" rx="18" fill="url(#host)" stroke="#4ade80" stroke-width="2.5"/>
+  <text x="800" y="469" text-anchor="middle" class="label">Lenovo ThinkCentre M720q</text>
+  <text x="800" y="497" text-anchor="middle" class="detail">Proxmox VE · 24 GB RAM · 10.0.0.232</text>
+  <text x="800" y="523" text-anchor="middle" class="small">Physical virtualization host</text>
+  <path d="M800 542V562" class="connector"/>
+  <rect x="645" y="567" width="310" height="66" rx="14" fill="#382e13" stroke="#facc15" stroke-width="2"/>
+  <text x="800" y="596" text-anchor="middle" class="label" style="font-size:18px">Proxmox bridge · vmbr0</text>
+  <text x="800" y="620" text-anchor="middle" class="small">LAN-connected virtual network</text>
 
   <!-- Remote tailnet client -->
   <rect x="52" y="355" width="292" height="130" rx="18" fill="#102b3a" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8 6"/>
@@ -47,7 +51,7 @@
   <text x="202" y="638" text-anchor="middle" class="small">via tailscale VM</text>
 
   <!-- Branches to VMs -->
-  <path d="M800 611V659H285V716" class="connector"/>
+  <path d="M800 633V659H285V716" class="connector"/>
   <path d="M800 659V716" class="connector"/>
   <path d="M800 659H1315V716" class="connector"/>
   <rect x="62" y="704" width="446" height="270" rx="18" fill="#17172b" stroke="#c084fc" stroke-width="2.5"/>

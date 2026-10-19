@@ -6,13 +6,14 @@ This directory contains the current physical and logical architecture of the hom
 
 ![Current homelab network architecture](./network-diagram.png)
 
-The Xfinity gateway provides the `10.0.0.0/24` home LAN. The Lenovo ThinkCentre M720q runs Proxmox VE and connects its virtual machines to that LAN through `vmbr0`. Three active VMs are documented: `tailscale` (`10.0.0.13`), `debdock` (`10.0.0.12`), and `willy` (`10.0.0.8`). The Docker VM `debdock` hosts Uptime Kuma, Pi-hole, and Navidrome. Tailscale provides remote access to the home LAN.
+The Xfinity gateway provides the `10.0.0.0/24` home LAN and connects through a TP-Link TL-SG108E 8-port Gigabit smart switch to the Lenovo ThinkCentre M720q running Proxmox VE. Proxmox connects its virtual machines to the LAN through `vmbr0`. Three active VMs are documented: `tailscale` (`10.0.0.13`), `debdock` (`10.0.0.12`), and `willy` (`10.0.0.8`). The Docker VM `debdock` hosts Uptime Kuma, Pi-hole, and Navidrome. Tailscale provides remote access to the home LAN. Switch management and VLAN configuration are not yet documented.
 
 The diagram is also available as an editable [draw.io file](./homelab-network-diagram-fixed.drawio) and as an [SVG source](./network-diagram.svg).
 
 ## Current components
 
 - Xfinity 1 Gbps Internet and modem/router (`10.0.0.1`)
+- TP-Link TL-SG108E 8-port Gigabit Easy Smart Switch between the gateway and Proxmox host
 - Lenovo ThinkCentre M720q running Proxmox VE with 24 GB RAM (`10.0.0.232`)
 - Proxmox Linux bridge `vmbr0` on `10.0.0.0/24`
 - Debian VM `tailscale` for remote access
