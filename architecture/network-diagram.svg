@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" role="img" aria-labelledby="title desc">
   <title id="title">Homelab network architecture</title>
-  <desc id="desc">Xfinity Internet and gateway connect to a Proxmox host and three virtual machines on the 10.0.0.0/24 LAN. A Tailscale subnet route provides remote access to the LAN. The debdock virtual machine runs Uptime Kuma, Pi-hole, and Navidrome in Docker.</desc>
+  <desc id="desc">Xfinity Internet and gateway connect to a Proxmox host and three virtual machines on the 10.0.0.0/24 LAN. A Tailscale subnet route provides remote access to the LAN. The debdock virtual machine runs Uptime Kuma, Pi-hole, Navidrome, and Nextcloud in Docker.</desc>
   <defs>
     <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#080d18"/></linearGradient>
     <linearGradient id="host" x2="0" y2="1"><stop stop-color="#193b35"/><stop offset="1" stop-color="#122a29"/></linearGradient>
@@ -69,12 +69,14 @@
   <text x="800" y="774" text-anchor="middle" class="detail">10.0.0.12 · vmbr0</text>
   <text x="800" y="805" text-anchor="middle" class="small">Docker host · VM ID / resources not recorded</text>
   <line x1="610" y1="828" x2="990" y2="828" stroke="#285451"/>
-  <rect x="628" y="844" width="344" height="34" rx="9" fill="#143b3a" stroke="#367c76"/>
-  <text x="800" y="867" text-anchor="middle" class="tag">Uptime Kuma</text>
-  <rect x="628" y="887" width="344" height="34" rx="9" fill="#143b3a" stroke="#367c76"/>
-  <text x="800" y="910" text-anchor="middle" class="tag">Pi-hole</text>
-  <rect x="628" y="930" width="344" height="30" rx="9" fill="#143b3a" stroke="#367c76"/>
-  <text x="800" y="951" text-anchor="middle" class="tag">Navidrome</text>
+  <rect x="628" y="840" width="344" height="27" rx="8" fill="#143b3a" stroke="#367c76"/>
+  <text x="800" y="859" text-anchor="middle" class="tag">Uptime Kuma</text>
+  <rect x="628" y="872" width="344" height="27" rx="8" fill="#143b3a" stroke="#367c76"/>
+  <text x="800" y="891" text-anchor="middle" class="tag">Pi-hole</text>
+  <rect x="628" y="904" width="344" height="27" rx="8" fill="#143b3a" stroke="#367c76"/>
+  <text x="800" y="923" text-anchor="middle" class="tag">Navidrome</text>
+  <rect x="628" y="936" width="344" height="27" rx="8" fill="#143b3a" stroke="#367c76"/>
+  <text x="800" y="955" text-anchor="middle" class="tag">Nextcloud</text>
 
   <rect x="1092" y="704" width="446" height="270" rx="18" fill="#14243b" stroke="#60a5fa" stroke-width="2.5"/>
   <text x="1315" y="744" text-anchor="middle" class="label">VM 100 · willy</text>
