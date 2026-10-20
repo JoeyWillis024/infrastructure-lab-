@@ -67,16 +67,16 @@
   <rect x="577" y="704" width="446" height="270" rx="18" fill="#102a2b" stroke="#2dd4bf" stroke-width="2.5"/>
   <text x="800" y="744" text-anchor="middle" class="label">debdock · Debian Docker VM</text>
   <text x="800" y="774" text-anchor="middle" class="detail">10.0.0.12 · vmbr0</text>
-  <text x="800" y="805" text-anchor="middle" class="small">Docker host · VM ID / resources not recorded</text>
+  <text x="800" y="805" text-anchor="middle" class="small">Docker host</text>
   <line x1="610" y1="828" x2="990" y2="828" stroke="#285451"/>
   <rect x="628" y="840" width="344" height="27" rx="8" fill="#143b3a" stroke="#367c76"/>
-  <text x="800" y="859" text-anchor="middle" class="tag">Uptime Kuma</text>
+  <text x="800" y="859" text-anchor="middle" class="tag">Uptime Kuma · :3001</text>
   <rect x="628" y="872" width="344" height="27" rx="8" fill="#143b3a" stroke="#367c76"/>
-  <text x="800" y="891" text-anchor="middle" class="tag">Pi-hole</text>
+  <text x="800" y="891" text-anchor="middle" class="tag">Pi-hole · DNS :53 · Web :8080</text>
   <rect x="628" y="904" width="344" height="27" rx="8" fill="#143b3a" stroke="#367c76"/>
-  <text x="800" y="923" text-anchor="middle" class="tag">Navidrome</text>
+  <text x="800" y="923" text-anchor="middle" class="tag">Navidrome · :4533</text>
   <rect x="628" y="936" width="344" height="27" rx="8" fill="#143b3a" stroke="#367c76"/>
-  <text x="800" y="955" text-anchor="middle" class="tag">Nextcloud</text>
+  <text x="800" y="955" text-anchor="middle" class="tag">Nextcloud · :8082 → container :80</text>
 
   <rect x="1092" y="704" width="446" height="270" rx="18" fill="#14243b" stroke="#60a5fa" stroke-width="2.5"/>
   <text x="1315" y="744" text-anchor="middle" class="label">VM 100 · willy</text>

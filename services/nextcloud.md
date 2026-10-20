@@ -6,7 +6,7 @@ Nextcloud provides self-hosted file storage and collaboration services. It runs 
 
 ## Deployment
 
-Nextcloud has been added to `debdock`. The Compose directory, web interface address and port, image, database, and persistent storage details have not yet been recorded here. Add those details from the running deployment so this page can serve as a recovery reference.
+The running container is named `nextcloud-app-1` and uses the `nextcloud:apache` image. The web interface is published on host port `8082`, mapped to container port `80` (`http://10.0.0.12:8082` on the LAN). A separate `mariadb:lts` container named `nextcloud-db-1` provides the database on the internal Docker network; port 3306 is not published on the host. The Compose directory and persistent storage details have not yet been recorded here. Add those details from the running deployment so this page can serve as a recovery reference.
 
 ## Operations
 
