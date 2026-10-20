@@ -22,7 +22,7 @@ Additional hardware specifications will be documented as the lab develops.
 
 ## Virtual Machines
 
-The current environment contains an Ubuntu Desktop VM, a dedicated Debian VM for Tailscale, and a separate Debian Docker VM (`debdock`) that hosts the three homelab services. See [`vm-inventory.md`](./vm-inventory.md) for the inventory and details that still need to be recorded.
+The current environment contains an Ubuntu Desktop VM, a dedicated Debian VM for Tailscale, and a separate Debian Docker VM (`debdock`) that hosts Uptime Kuma, Pi-hole, Navidrome, and Nextcloud. See [`vm-inventory.md`](./vm-inventory.md) for the inventory and details that still need to be recorded.
 
 ## Virtual Networking
 
