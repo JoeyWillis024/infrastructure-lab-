@@ -8,9 +8,9 @@ This document tracks the virtual machines currently deployed within the Proxmox 
 |---|---|---|---:|---:|---:|---|---|---|
 | 100 | `willy` | Ubuntu Desktop | 4 cores | 7.47 GiB | 32 GB | VirtIO / vmbr0 | Sandbox / Testing | Active |
 | 101 | `tailscale` | Debian | 1 core | 2 GiB | 8 GB | VirtIO / vmbr0 | Tailscale / Remote Access | Active |
-| Not recorded | `debdock` | Debian | Not recorded | Not recorded | Not recorded | VirtIO / vmbr0 · `10.0.0.12` | Docker host for Uptime Kuma, Pi-hole, Navidrome, and Nextcloud | Active |
+| Not recorded | `debdock` | Debian | 2 cores | 12 GB | Not recorded | VirtIO / vmbr0 · `10.0.0.12` | Docker host for Uptime Kuma, Pi-hole, Navidrome, and Nextcloud | Active |
 
-Uptime Kuma, Pi-hole, Navidrome, and Nextcloud run in Docker on the Debian VM `debdock`, separate from the dedicated Tailscale VM. Its LAN address is `10.0.0.12`; its VM ID and resource allocations have not yet been recorded.
+Uptime Kuma, Pi-hole, Navidrome, and Nextcloud run in Docker on the Debian VM `debdock`, separate from the dedicated Tailscale VM. Its LAN address is `10.0.0.12`, with 2 CPU cores and 12 GB of memory. Its VM ID and disk allocation have not yet been recorded.
 
 ## VM 100 — willy
 

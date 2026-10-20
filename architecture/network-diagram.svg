@@ -67,7 +67,7 @@
   <rect x="577" y="704" width="446" height="270" rx="18" fill="#102a2b" stroke="#2dd4bf" stroke-width="2.5"/>
   <text x="800" y="744" text-anchor="middle" class="label">debdock · Debian Docker VM</text>
   <text x="800" y="774" text-anchor="middle" class="detail">10.0.0.12 · vmbr0</text>
-  <text x="800" y="805" text-anchor="middle" class="small">Docker host</text>
+  <text x="800" y="805" text-anchor="middle" class="small">2 CPU · 12 GB RAM</text>
   <line x1="610" y1="828" x2="990" y2="828" stroke="#285451"/>
   <rect x="628" y="840" width="344" height="27" rx="8" fill="#143b3a" stroke="#367c76"/>
   <text x="800" y="859" text-anchor="middle" class="tag">Uptime Kuma · :3001</text>
