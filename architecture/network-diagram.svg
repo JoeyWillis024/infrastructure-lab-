@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" role="img" aria-labelledby="title desc">
   <title id="title">Homelab network architecture</title>
-  <desc id="desc">Xfinity Internet and gateway connect to a Proxmox host and three virtual machines on the 10.0.0.0/24 LAN. A Tailscale subnet route provides remote access to the LAN. The debdock virtual machine runs Uptime Kuma, Pi-hole, Navidrome, and Nextcloud in Docker.</desc>
+  <desc id="desc">Xfinity Internet and gateway connect to a Proxmox host running three virtual machines and Jellyfin LXC 110 on the 10.0.0.0/24 LAN. Jellyfin media is mounted read-only from a 476.9 GB disk. A Tailscale subnet route provides remote access to the LAN. The debdock virtual machine runs Uptime Kuma, Pi-hole, Navidrome, and Nextcloud in Docker.</desc>
   <defs>
     <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#080d18"/></linearGradient>
     <linearGradient id="host" x2="0" y2="1"><stop stop-color="#193b35"/><stop offset="1" stop-color="#122a29"/></linearGradient>
@@ -12,7 +12,7 @@
   </defs>
   <rect width="1600" height="1040" fill="url(#bg)"/>
   <text x="800" y="52" text-anchor="middle" class="title">HOMELAB NETWORK ARCHITECTURE</text>
-  <text x="800" y="80" text-anchor="middle" class="subtitle">Current topology · Home LAN 10.0.0.0/24 · Updated October 2026</text>
+  <text x="800" y="80" text-anchor="middle" class="subtitle">Current topology · Home LAN 10.0.0.0/24 · Updated November 2026</text>
 
   <!-- Internet and gateway -->
   <rect x="645" y="110" width="310" height="82" rx="18" class="card" stroke="#38bdf8"/>
@@ -39,6 +39,14 @@
   <rect x="645" y="567" width="310" height="66" rx="14" fill="#382e13" stroke="#facc15" stroke-width="2"/>
   <text x="800" y="596" text-anchor="middle" class="label" style="font-size:18px">Proxmox bridge · vmbr0</text>
   <text x="800" y="620" text-anchor="middle" class="small">LAN-connected virtual network</text>
+
+  <!-- Jellyfin LXC and host media storage -->
+  <path d="M955 600H1075" class="connector"/>
+  <rect x="1083" y="548" width="462" height="104" rx="15" fill="#102a2b" stroke="#2dd4bf" stroke-width="2.5"/>
+  <text x="1314" y="574" text-anchor="middle" class="label" style="font-size:18px">LXC 110 · jellyfin</text>
+  <text x="1314" y="598" text-anchor="middle" class="small">Debian · 4 CPU · 2 GiB RAM · DHCP</text>
+  <text x="1314" y="622" text-anchor="middle" class="small">Media: /mnt/backup/media → /media (read-only)</text>
+  <text x="1314" y="643" text-anchor="middle" class="small">Host: new 500 GB NVMe + 476.9 GB /dev/sda1</text>
 
   <!-- Remote tailnet client -->
   <rect x="52" y="355" width="292" height="130" rx="18" fill="#102b3a" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8 6"/>
@@ -87,5 +95,5 @@
   <text x="1315" y="897" text-anchor="middle" class="detail">32 GB disk · VirtIO / vmbr0</text>
   <text x="1315" y="928" text-anchor="middle" class="small">Proxmox firewall enabled</text>
 
-  <text x="800" y="1012" text-anchor="middle" class="small">Solid arrows: LAN and VM connectivity · Dashed blue path: remote Tailscale access · VLAN segmentation not currently documented</text>
+  <text x="800" y="1012" text-anchor="middle" class="small">Solid arrows: LAN and guest connectivity · Dashed blue path: remote Tailscale access · VLAN segmentation not currently documented</text>
 </svg>

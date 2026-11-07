@@ -20,9 +20,9 @@ The environment is used to develop practical experience with virtualization, Lin
 
 Additional hardware specifications will be documented as the lab develops.
 
-## Virtual Machines
+## Virtualization
 
-The current environment contains an Ubuntu Desktop VM, a dedicated Debian VM for Tailscale, and a separate Debian Docker VM (`debdock`) that hosts Uptime Kuma, Pi-hole, Navidrome, and Nextcloud. See [`vm-inventory.md`](./vm-inventory.md) for the inventory and details that still need to be recorded.
+The current environment contains Ubuntu Desktop and Debian virtual machines, a Debian Docker VM (`debdock`), and a Debian LXC container (`jellyfin`). See [`vm-inventory.md`](./vm-inventory.md) for the guest inventory and [`storage.md`](./storage.md) for host disks and the Jellyfin media bind mount.
 
 ## Virtual Networking
 

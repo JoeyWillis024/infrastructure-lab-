@@ -30,7 +30,7 @@ This repository documents my personal homelab and its ongoing development while 
 * Self-hosted services
 * Remote administration
 
-See [`services/`](./services/) for deployed-service notes, including [Uptime Kuma](./services/uptime-kuma.md) and [Nextcloud](./services/nextcloud.md).
+See [`services/`](./services/) for deployed-service notes, including [Jellyfin](./services/jellyfin.md), [Uptime Kuma](./services/uptime-kuma.md), and [Nextcloud](./services/nextcloud.md).
 
 ### Automation
 
