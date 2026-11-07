@@ -18,7 +18,7 @@ The current network consists of:
 * Lenovo ThinkCentre M720q Proxmox host
 * Proxmox virtual networking
 * Debian `tailscale` VM (`10.0.0.13`)
-* Debian Docker VM `debdock` (`10.0.0.12`)
+* Debian Docker VM `debdock` (`10.0.0.107`)
 * Ubuntu Desktop VM `willy` (`10.0.0.8`)
 * Tailscale for remote access
 
