@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Uptime Kuma monitors whether homelab hosts and web services respond. It runs in Docker on the Debian Docker VM, `debdock`.
+Uptime Kuma monitors whether homelab hosts and web services respond. It runs in Docker on the Debian Docker VM, `debdock` (`10.0.0.107`).
 
 ## Deployment
 
