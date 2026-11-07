@@ -21,6 +21,8 @@ This repository documents my personal homelab and its ongoing development while 
 
 ### Operating Systems
 
+* Fedora Workstation
+* Debian Linux
 * Ubuntu Linux
 * Windows
 
