@@ -1,0 +1,11 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin-on-the-go
+    restart: unless-stopped
+    ports:
+      - "8096:8096/tcp"
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      - ${JELLYFIN_MEDIA_PATH:-./media}:/media:ro

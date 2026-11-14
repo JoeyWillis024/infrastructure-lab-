@@ -1,0 +1,11 @@
+services:
+  jellyfin:
+    image: docker.io/jellyfin/jellyfin:latest
+    container_name: jellyfin-on-the-go
+    restart: unless-stopped
+    ports:
+      - "8096:8096/tcp"
+    volumes:
+      - ./config:/config:Z
+      - ./cache:/cache:Z
+      - ./media:/media:ro,Z

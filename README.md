@@ -32,7 +32,7 @@ This repository documents my personal homelab and its ongoing development while 
 * Self-hosted services
 * Remote administration
 
-See the [service inventory](./services/README.md) for deployed-service notes on [Jellyfin](./services/jellyfin.md), [Uptime Kuma](./services/uptime-kuma.md), [Pi-hole](./services/pihole.md), [Navidrome](./services/navidrome.md), and [Nextcloud](./services/nextcloud.md).
+See the [service inventory](./services/README.md) for deployed-service notes on [Jellyfin](./services/jellyfin.md), [Uptime Kuma](./services/uptime-kuma.md), [Pi-hole](./services/pihole.md), [Navidrome](./services/navidrome.md), and [Nextcloud](./services/nextcloud.md). The Jellyfin guide includes an on-the-go setup for securely copying media over Tailscale and serving it on a remote LAN.
 
 ### Automation
 
