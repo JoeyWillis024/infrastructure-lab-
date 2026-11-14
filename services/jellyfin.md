@@ -40,6 +40,10 @@ podman compose -f compose-podman.yaml down
 
 On Fedora/SELinux, the `:Z` volume labels in the file let the container access its private config/cache and read-only media mounts. On other Linux distributions they are generally ignored by Podman-compatible engines.
 
+#### Optional hardware transcoding on Linux
+
+Hardware transcoding is optional. Direct-play streams do not require it. For supported Intel or AMD graphics using VA-API/QSV, confirm the host exposes `/dev/dri` (for example, `ls -l /dev/dri`), then uncomment the `devices` lines in `compose-podman.yaml` and recreate the container with `podman compose -f compose-podman.yaml up -d`. The host GPU driver and Jellyfin's access to the render device must also be configured. On SELinux systems, follow Jellyfin's current [container hardware acceleration instructions](https://jellyfin.org/docs/general/installation/container/#hardware-acceleration); Fedora may require enabling the documented `container_use_dri_devices` SELinux boolean. In Jellyfin Dashboard → Playback → Transcoding, choose the acceleration method that matches the GPU and enable the codecs it supports, then verify a transcode in the playback dashboard/logs. NVIDIA requires its host driver and NVIDIA container device support, so `/dev/dri` alone is not the right setup for NVIDIA.
+
 ### Windows with Docker Compose
 
 Files: [`compose-docker.yaml`](./jellyfin-on-the-go/compose-docker.yaml) and [`.env.example`](./jellyfin-on-the-go/.env.example). Copy `.env.example` to `.env`, set `JELLYFIN_MEDIA_PATH` to the absolute path containing the downloaded media (for example `D:/Jellyfin/media`), and run in PowerShell from the directory containing the Compose file:
@@ -51,3 +55,7 @@ docker compose -f compose-docker.yaml down
 ```
 
 Docker Desktop must be allowed to access the chosen media folder. Keep the `.env` file local; it is not needed for secrets, but its machine-specific path should not be committed.
+
+#### Hardware transcoding on Windows
+
+Jellyfin's official documentation says running its container on Windows is unsupported and lists hardware-accelerated transcoding among the features that may be broken. Docker Desktop's general NVIDIA GPU passthrough through WSL 2 does not change that Jellyfin support limitation, so this Compose setup is intended for software transcoding or direct play and does not include GPU passthrough settings. For supported Windows hardware transcoding, install Jellyfin natively on Windows and configure the matching acceleration method in Dashboard → Playback → Transcoding. See Jellyfin's [hardware acceleration guide](https://jellyfin.org/docs/general/post-install/transcoding/hardware-acceleration/) and [container guidance](https://jellyfin.org/docs/general/installation/container/#installation-instructions).

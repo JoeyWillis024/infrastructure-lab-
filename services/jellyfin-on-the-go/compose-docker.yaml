@@ -1,5 +1,7 @@
 services:
   jellyfin:
+    # Jellyfin does not support its container on Windows hosts. See the guide's
+    # Windows note: use the native Windows installer for supported GPU transcoding.
     image: jellyfin/jellyfin:latest
     container_name: jellyfin-on-the-go
     restart: unless-stopped

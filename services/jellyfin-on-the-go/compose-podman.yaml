@@ -9,3 +9,6 @@ services:
       - ./config:/config:Z
       - ./cache:/cache:Z
       - ./media:/media:ro,Z
+    # Optional Intel/AMD GPU access on Linux. Uncomment on a host with /dev/dri:
+    # devices:
+    #   - /dev/dri:/dev/dri
