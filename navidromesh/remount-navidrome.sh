@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Was a cool little project the script worked, but the SSD was faulty :(
 # ============================================================
 # Navidrome USB Music SSD Recovery Script
 # ============================================================
